@@ -48,7 +48,7 @@ namespace PlagijatorFinder
         void SaveAndConvertFile(HttpPostedFile file)
         {
             // Putanja ka direktorijumu gde ce biti snimljen svaki uneti fajl            
-            string savePath = "C:\\Users\\Aleksandar\\Desktop\\SimFi-master\\PlagijatorFinder\\PlagijatorFinder\\uploadFiles\\";
+            string savePath = "C:\\Users\\Stefan\\Desktop\\uploadFiles\\";
             //string savePath = "C:\\Users\\DR.AKUL\\Documents\\Visual Studio 2010\\Projects\\PlagijatorFinder\\PlagijatorFinder\\uploadFiles\\";
             string fileName = null ;
             if(RequiredFieldValidator1.IsValid)

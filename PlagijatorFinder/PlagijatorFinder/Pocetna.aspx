@@ -20,6 +20,10 @@
         <SortedDescendingCellStyle BackColor="#FFFDF8" />
         <SortedDescendingHeaderStyle BackColor="#6F8DAE" />
     </asp:GridView>
-    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:bazaRadovaConnectionString %>" SelectCommand="SELECT [Name], [Year] FROM [Rad]"></asp:SqlDataSource>
+    <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:bazaRadovaConnectionString %>" SelectCommand="SELECT [Name], [Year] FROM [Rad] WHERE ([userName] = @userName)">
+        <SelectParameters>
+            <asp:Parameter Name="userName" Type="String" />
+        </SelectParameters>
+    </asp:SqlDataSource>
 
 </asp:Content>

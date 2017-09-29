@@ -11,7 +11,9 @@ namespace PlagijatorFinder
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            //SqlDataSource1.SelectParameters.Add("userName", System.Data.DbType.AnsiString, System.Web.HttpContext.Current.User.Identity.Name.ToString());
+            SqlDataSource1.SelectParameters["userName"].DefaultValue = System.Web.HttpContext.Current.User.Identity.Name.ToString();
+            this.Title = System.Web.HttpContext.Current.User.Identity.Name.ToString();
         }
     }
 }

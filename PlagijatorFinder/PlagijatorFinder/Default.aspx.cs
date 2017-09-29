@@ -113,15 +113,17 @@ namespace PlagijatorFinder
                 try
                 {
                     //ubacivanje fajla u tabelu Rad
-                    SqlCommand cmn = new SqlCommand("INSERT INTO Rad(Name, Year, filePDFPath, fileTXTPath) VALUES" +
-                                                                      " (@name, @year, @filePDF, @fileTXT)");
+                    SqlCommand cmn = new SqlCommand("INSERT INTO Rad(Name, Year, filePDFPath, fileTXTPath, userName) VALUES" +
+                                                                      " (@name, @year, @filePDF, @fileTXT, @userName)");
 
+                    string userName = System.Web.HttpContext.Current.User.Identity.Name.ToString();
                     cmn.CommandType = System.Data.CommandType.Text;
                     cmn.Connection = conn;
                     cmn.Parameters.AddWithValue("@name", fileNameTextBox.Text);
                     cmn.Parameters.AddWithValue("@year", godina);
                     cmn.Parameters.AddWithValue("@filePDF", savePath);
                     cmn.Parameters.AddWithValue("@fileTXT", savePath + ".txt");
+                    cmn.Parameters.AddWithValue("@userName", userName);
                     cmn.ExecuteNonQuery();
                     checkBoxListLabel.Text = "URAAA!";
 
@@ -150,7 +152,7 @@ namespace PlagijatorFinder
                     string[] autori = autoriString.Split(charSeparators, StringSplitOptions.None);
 
                    // Conn.open();
-
+                    /*
                     foreach (var x in autori)
                     {
                         SqlCommand cmn2 = new SqlCommand("exec spInsertAutore @imeautora");
@@ -160,7 +162,7 @@ namespace PlagijatorFinder
                         cmn2.Parameters.AddWithValue("@imeautora", x);
                         cmn2.ExecuteNonQuery();
 
-                    }
+                    }*/
                     //Conn.close();
                     conn.Close();
                     

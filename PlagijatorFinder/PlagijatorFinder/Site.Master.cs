@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -15,7 +15,8 @@ namespace PlagijatorFinder
             if(!System.Web.HttpContext.Current.User.Identity.IsAuthenticated){
                 NavigationMenu.FindItem("Unos rada").Selectable = false;
                 NavigationMenu.FindItem("Uporedjivanje").Selectable = false;
-                NavigationMenu.FindItem("Test").Selectable = false;                
+                NavigationMenu.FindItem("Test").Selectable = false;
+                NavigationMenu.FindItem("Tabela Slicnosti").Selectable = false;
             }
         }
 

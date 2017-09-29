@@ -13,9 +13,9 @@ namespace PlagijatorFinder
         protected void Page_Load(object sender, EventArgs e)
         {
             if(!System.Web.HttpContext.Current.User.Identity.IsAuthenticated){
+                NavigationMenu.FindItem("Unos rada").Selectable = false;
                 NavigationMenu.FindItem("Uporedjivanje").Selectable = false;
-                NavigationMenu.FindItem("Test").Selectable = false;
-                NavigationMenu.FindItem("Tabela Slicnosti").Selectable = false;
+                NavigationMenu.FindItem("Test").Selectable = false;                
             }
         }
 

@@ -41,7 +41,7 @@
                     <Items>                        
                         <asp:MenuItem NavigateUrl="~/Pocetna.aspx" Text="Početna" Value="Pocetna">
                         </asp:MenuItem>
-                        <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Unos rada" Value="Unos rada" />                        
+                        <asp:MenuItem NavigateUrl="~/Default.aspx" Text="Unos rada" Value="Unos rada" ToolTip="You have to be logged in" />                        
                         
                         <asp:MenuItem NavigateUrl="~/Uporedjivanje.aspx" Text="Uporedjivanje" Value="Uporedjivanje" ToolTip="You have to be logged in." />
                         <asp:MenuItem NavigateUrl="~/testStrana.aspx" Text="Test" Value="Test" ToolTip="You have to be logged in." />
